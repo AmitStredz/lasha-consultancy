@@ -49,7 +49,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <motion.div className="h-1 bg-gradient-to-r from-primary/60 via-primary to-primary/70 origin-left" style={{ scaleX: progress }} />
+      <motion.div className="h-1 bg-linear-to-r from-primary/60 via-primary to-primary/70 origin-left" style={{ scaleX: progress }} />
       <div
         className={`transition-all duration-300 ${
           isScrolled ? "bg-background/85 backdrop-blur-xl shadow-lg shadow-primary/5" : "bg-transparent"
@@ -58,13 +58,14 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.a 
-            href="#home" 
+          <motion.a
+            href="#home"
             className="flex items-center gap-4 group"
             whileHover={{ scale: 1.02 }}
           >
             <div className="w-11 h-11 bg-primary rounded-sm flex items-center justify-center group-hover:shadow-lg transition-shadow">
-              <TbStairs className="w-6 h-6 text-primary-foreground" />
+              {/* <TbStairs className="w-6 h-6 text-primary-foreground" /> */}
+              <img src="/logo2.png" alt="Lasha Consultancy Logo" className="w-10 h-10" />
             </div>
             <div className="flex flex-col">
               <span className="font-display text-lg font-semibold text-foreground">
