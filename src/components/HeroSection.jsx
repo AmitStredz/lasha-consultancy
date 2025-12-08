@@ -134,7 +134,7 @@ const HeroSection = () => {
             </motion.div>
 
             {/* Stats */}
-            <motion.div 
+            {/* <motion.div 
               variants={itemVariants}
               className="flex gap-6 pt-6 border-t border-white/20"
             >
@@ -148,7 +148,7 @@ const HeroSection = () => {
                   <div className="text-xs text-white/70">{stat.label}</div>
                 </div>
               ))}
-            </motion.div>
+            </motion.div> */}
 
             {/* Trusted Logos */}
             <motion.div
@@ -210,7 +210,7 @@ const HeroSection = () => {
               </motion.div>
 
               {/* Floating Award Card */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.5 }}
@@ -225,7 +225,7 @@ const HeroSection = () => {
                     <div className="text-xs text-gray-500">Best Consultancy 2024</div>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div> */}
 
               {/* Decorative Dots */}
               <div className="absolute -top-3 -right-3 grid grid-cols-3 gap-1 opacity-30">
