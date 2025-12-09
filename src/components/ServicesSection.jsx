@@ -29,7 +29,7 @@ const services = [
     icon: FiGlobe,
     title: "Tourism",
     description: "Premium tourism services offering curated travel experiences, destination management, tour planning, and hospitality consulting across UAE.",
-    image: '/assets/tourism.jpg',
+    image: '/assets/tourism.png',
     // features: ["Destination Management", "Tour Planning", "Hospitality Consulting"],
   },
 ];
@@ -139,11 +139,11 @@ const ServicesSection = () => {
                 
                 {/* Icon Badge */}
                 <div className="absolute top-4 left-4 w-12 h-12 bg-primary rounded-lg flex items-center justify-center shadow-lg">
-                  <service.icon className="w-6 h-6 text-primary-foreground" />
+                  <service.icon className="w-6 h-6 text-primary-foreground text-white" />
                 </div>
 
                 {/* Number */}
-                <div className="absolute top-4 right-4 text-6xl font-display font-bold text-white/15">
+                <div className="absolute top-4 right-4 text-6xl font-display font-bold text-white/60">
                   0{index + 1}
                 </div>
               </div>

@@ -43,7 +43,7 @@ const HeroSection = () => {
         className="absolute top-20 left-0 right-0 bottom-0 z-0"
         style={{
           y: backgroundY,
-          backgroundImage: "url(/assets/hero3.png)",
+          backgroundImage: "url(/assets/hero.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
