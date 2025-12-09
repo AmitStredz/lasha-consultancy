@@ -43,7 +43,7 @@ const HeroSection = () => {
         className="absolute top-20 left-0 right-0 bottom-0 z-0"
         style={{
           y: backgroundY,
-          backgroundImage: "url(/assets/hero.JPG)",
+          backgroundImage: "url(/assets/hero3.png)",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -70,19 +70,19 @@ const HeroSection = () => {
         />
       </div>
 
-      <motion.div style={{ y: foregroundY }} className="container mx-auto px-4 sm:px-6 lg:px-12 h-full relative z-30 flex items-center">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full py-24 sm:py-32 lg:pt-40 lg:pb-12">
+      <motion.div style={{ y: foregroundY }} className="container mx-auto px-10 sm:px-6 lg:px-12 h-full relative z-30 flex items-center min-h-screen">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full py-32 sm:py-36 lg:pt-40 lg:pb-12">
           {/* Left Content */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="text-left order-2 lg:order-1"
+            className="text-left order-2 lg:order-1 max-w-2xl"
           >
             {/* Badge */}
             <motion.div 
               variants={itemVariants}
-              className="floating-badge mb-4 sm:mb-6 text-white/90"
+              className="floating-badge mb-6 sm:mb-6 text-white/90"
             >
               <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse" />
               <span className="text-xs sm:text-sm font-medium">Dubai's Premier Consultancy</span>
@@ -91,7 +91,7 @@ const HeroSection = () => {
             {/* Main Heading */}
             <motion.h1
               variants={itemVariants}
-              className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.1] mb-3 sm:mb-4"
+              className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.15] mb-6 sm:mb-6"
             >
               Where{" "}
               <span className="gradient-text">People</span>
@@ -103,7 +103,7 @@ const HeroSection = () => {
             {/* Subtext */}
             <motion.p
               variants={itemVariants}
-              className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed max-w-lg mb-4 sm:mb-6"
+              className="text-white/80 text-base sm:text-lg md:text-xl leading-relaxed max-w-lg mb-8 sm:mb-8"
             >
               Your trusted partner for Human Resources, Real Estate, Tourism, and AI Automation solutions in Dubai. Building smarter futures together.
             </motion.p>
@@ -111,11 +111,11 @@ const HeroSection = () => {
             {/* CTA Buttons */}
             <motion.div 
               variants={itemVariants}
-              className="flex flex-col sm:flex-row flex-wrap gap-3 mb-6"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 mb-8 sm:mb-10"
             >
               <motion.a
                 href="#services"
-                className="btn-primary inline-flex items-center justify-center gap-2 text-center"
+                className="btn-primary inline-flex items-center justify-center gap-2 text-center w-full sm:w-auto"
                 whileHover={{ scale: 1.05, gap: "12px" }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -124,7 +124,7 @@ const HeroSection = () => {
               </motion.a>
               <motion.a
                 href="#about"
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm font-semibold border-2 border-white/30 bg-transparent text-white rounded-sm transition-all duration-300 hover:bg-white/10 hover:border-white/50"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 text-sm font-semibold border-2 border-white/30 bg-transparent text-white rounded-sm transition-all duration-300 hover:bg-white/10 hover:border-white/50 w-full sm:w-auto"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -136,11 +136,11 @@ const HeroSection = () => {
             {/* Trusted Logos */}
             <motion.div
               variants={itemVariants}
-              className="mt-6 sm:mt-8 flex flex-wrap items-center gap-3 sm:gap-6 text-white/60 text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em]"
+              className="mt-2 flex flex-wrap items-center gap-4 sm:gap-6 text-white/60 text-xs uppercase tracking-[0.2em]"
             >
-              <span className="text-white/70 font-semibold tracking-[0.15em] sm:tracking-[0.2em]">Trusted By</span>
+              <span className="text-white/70 font-semibold tracking-[0.15em]">Trusted By</span>
               {["Investors", "Developers", "HR Leaders"].map((item) => (
-                <span key={item} className="flex items-center gap-1 sm:gap-2">
+                <span key={item} className="flex items-center gap-2">
                   <span className="w-1 h-1 rounded-full bg-white/30" />
                   {item}
                 </span>
