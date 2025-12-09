@@ -95,7 +95,7 @@ const MissionSection = () => {
               variants={itemVariants}
               className="text-mission-foreground/70 text-lg md:text-xl leading-relaxed mb-8"
             >
-              Lasha Consultancy strives to redefine professional services in Dubai by uniting Human Resources excellence, real estate intelligence, and AI-powered automation.
+              Lasha Consultancy strives to redefine professional services in Dubai by uniting Human Resources excellence, real estate intelligence, tourism experiences, and AI-powered automation.
             </motion.p>
 
             <motion.p 
@@ -179,7 +179,7 @@ const MissionSection = () => {
           />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center relative">
             {[
-              { value: "3", label: "Core Services", suffix: "" },
+              { value: "4", label: "Core Services", suffix: "" },
               { value: "100", label: "Expert Team", suffix: "+" },
               { value: "24/7", label: "Support Available", suffix: "" },
               { value: "50", label: "Partner Companies", suffix: "+" },

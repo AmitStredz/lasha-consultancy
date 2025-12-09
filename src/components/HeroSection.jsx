@@ -32,7 +32,8 @@ const HeroSection = () => {
   const floatingHighlights = [
     { label: "Human Resources", icon: "👥", delay: 0.2 },
     { label: "Real Estate", icon: "🏙️", delay: 0.35 },
-    { label: "AI Automation", icon: "🤖", delay: 0.5 },
+    { label: "Tourism", icon: "✈️", delay: 0.5 },
+    { label: "AI Automation", icon: "🤖", delay: 0.65 },
   ];
 
   return (
@@ -104,7 +105,7 @@ const HeroSection = () => {
               variants={itemVariants}
               className="text-white/80 text-sm sm:text-base md:text-lg leading-relaxed max-w-lg mb-4 sm:mb-6"
             >
-              Your trusted partner for Human Resources, Real Estate, and AI Automation solutions in Dubai. Building smarter futures together.
+              Your trusted partner for Human Resources, Real Estate, Tourism, and AI Automation solutions in Dubai. Building smarter futures together.
             </motion.p>
 
             {/* CTA Buttons */}

@@ -4,10 +4,10 @@ import { useRef } from "react";
 import { FiCheck } from "react-icons/fi";
 
 const highlights = [
-  "Full-service real estate and HR consulting",
+  "Full-service real estate, HR, and tourism consulting",
   "Predictive modeling and strategic planning",
   "Talent solutions and workforce development",
-  "Market analysis and property valuation",
+  "Market analysis, property valuation, and destination management",
 ];
 
 const AboutSection = () => {
@@ -73,10 +73,10 @@ const AboutSection = () => {
               <div className="absolute -top-4 -left-4 w-8 h-8 bg-primary rounded-sm" />
               <div className="absolute -bottom-4 -right-4 w-8 h-8 bg-secondary rounded-sm" />
               <blockquote className="font-display text-2xl md:text-3xl font-medium italic leading-relaxed">
-                "Empowering businesses to navigate real estate and organizational challenges with confidence."
+                "Empowering businesses to navigate real estate, organizational, and tourism challenges with confidence."
               </blockquote>
               <div className="mt-6 flex flex-wrap gap-4 text-xs uppercase tracking-[0.4em] text-foreground/50">
-                {["People", "Property", "Automation"].map((item) => (
+                {["People", "Property", "Tourism", "Tech"].map((item) => (
                   <span key={item} className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-primary/60" />
                     {item}
@@ -89,11 +89,11 @@ const AboutSection = () => {
           {/* Right Column - Content */}
           <motion.div variants={itemVariants} className="space-y-8">
             <p className="text-foreground/70 text-lg leading-relaxed">
-              At Lasha Consultancy, we are a full-service real estate and HR consulting agency dedicated to providing top-notch services in market analysis, property valuation, investor consulting, and talent solutions.
+              At Lasha Consultancy, we are a full-service consulting agency dedicated to providing top-notch services in real estate, HR solutions, AI automation, and tourism. From market analysis and property valuation to talent acquisition and curated travel experiences, we cover all aspects of business excellence.
             </p>
 
             <p className="text-foreground/70 text-lg leading-relaxed">
-              With a focus on predictive modeling, strategic planning, and effective HR practices such as recruitment, workforce planning, and performance management, we empower our clients to navigate both real estate and organizational challenges with confidence and clarity.
+              With a focus on predictive modeling, strategic planning, and innovative solutions across real estate, HR, and tourism sectors, we empower our clients to navigate complex challenges with confidence and clarity in Dubai's dynamic business landscape.
             </p>
 
             {/* Highlights */}

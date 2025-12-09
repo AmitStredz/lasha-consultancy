@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { FiUsers, FiHome, FiCpu, FiArrowRight } from "react-icons/fi";
+import { FiUsers, FiHome, FiCpu, FiArrowRight, FiGlobe } from "react-icons/fi";
 
 const services = [
   {
@@ -9,7 +9,7 @@ const services = [
     title: "Human Resources",
     description: "Comprehensive HR solutions including talent acquisition, workforce planning, performance management, and employee development strategies.",
     image: '/assets/hr.JPG',
-    features: ["Talent Acquisition", "Workforce Planning", "Performance Management"],
+    features: ["Talent Acquisition", "Workforce Planning"],
   },
   {
     icon: FiHome,
@@ -24,6 +24,13 @@ const services = [
     description: "Cutting-edge AI-powered automation solutions to streamline operations, enhance productivity, and drive data-driven decision making.",
     image: '/assets/ai.PNG',
     features: ["Process Automation", "Data Analytics", "Smart Solutions"],
+  },
+  {
+    icon: FiGlobe,
+    title: "Tourism",
+    description: "Premium tourism services offering curated travel experiences, destination management, tour planning, and hospitality consulting across UAE.",
+    image: '/assets/tourism.jpg',
+    features: ["Destination Management", "Tour Planning", "Hospitality Consulting"],
   },
 ];
 
@@ -94,7 +101,7 @@ const ServicesSection = () => {
           </h2>
           <p className="text-services-foreground/70 text-lg max-w-2xl mx-auto">
             Comprehensive solutions tailored to elevate your business in Dubai's dynamic market.
-            Each engagement blends human expertise with forward-looking automation.
+            From HR and real estate to AI automation and tourism, each engagement blends human expertise with forward-looking innovation.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3 text-xs uppercase tracking-[0.3em] text-services-foreground/50">
             {"Strategy • Execution • Growth".split(" • ").map((item) => (
@@ -112,7 +119,7 @@ const ServicesSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {services.map((service, index) => (
             <motion.div

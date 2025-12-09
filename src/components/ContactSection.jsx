@@ -214,7 +214,7 @@ const ContactSection = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Dedicated strategic partners
                 </li>
                 <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Hybrid HR, real estate, and automation expertise
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Expertise in HR, real estate, tourism & AI automation
                 </li>
                 <li className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Tailored solutions for Dubai's market
@@ -233,7 +233,7 @@ const ContactSection = () => {
                 <p className="text-xl font-semibold text-contact-foreground">Under 24 Hours</p>
               </div>
               <div className="flex items-center justify-end gap-4 text-xs uppercase tracking-[0.3em] text-contact-foreground/50">
-                {"Strategy • Real Estate • HR".split(" • ").map((item) => (
+                {"HR • Tourism • Real Estate • AI".split(" • ").map((item) => (
                   <span key={item} className="flex items-center gap-2">
                     <span className="w-1 h-1 rounded-full bg-primary/60" />
                     {item}
