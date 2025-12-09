@@ -5,7 +5,7 @@ import { FiArrowRight, FiPlay } from "react-icons/fi";
 const HeroSection = () => {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.75, 0.92]);
   const foregroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-8%"]);
 
@@ -70,7 +70,7 @@ const HeroSection = () => {
       </div>
 
       <motion.div style={{ y: foregroundY }} className="container mx-auto px-4 sm:px-6 lg:px-12 h-full relative z-30 flex items-center">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full py-24 sm:py-32 lg:pt-20 lg:pb-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full py-24 sm:py-32 lg:pt-40 lg:pb-12">
           {/* Left Content */}
           <motion.div
             variants={containerVariants}

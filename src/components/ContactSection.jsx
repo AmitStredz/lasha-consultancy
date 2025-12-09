@@ -3,6 +3,8 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
 import { toast } from "@/hooks/use-toast";
+import Mailgun from 'mailgun.js';
+import FormData from 'form-data';
 
 const contactInfo = [
   { icon: FiPhone, label: "Phone", value: "+971 506244352", href: "tel:+971506244352" },
@@ -16,17 +18,132 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
-    setFormData({ name: "", email: "", subject: "", message: "" });
-    setIsSubmitting(false);
-  };
-
   const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.15 } } };
   const itemVariants = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } } };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast({ 
+        title: "Invalid Email", 
+        description: "Please enter a valid email address.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Get API key from environment
+    const apiKey = import.meta.env.VITE_MAILGUN_API_KEY;
+    const domain = import.meta.env.VITE_MAILGUN_DOMAIN;
+
+    if (!apiKey || !domain) {
+      console.error("Mailgun credentials not configured");
+      toast({ 
+        title: "Configuration Error", 
+        description: "Email service is not properly configured. Please contact support.",
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setIsSubmitting(true);
+
+    try {
+      const mailgun = new Mailgun(FormData);
+      const mg = mailgun.client({
+        username: "api",
+        key: apiKey,
+      });
+
+      const response = await mg.messages.create(domain, {
+        from: `Lasha Consultancy Contact Form <noreply@${domain}>`,
+        to: ["amitstredz@gmail.com"],
+        "h:Reply-To": formData.email,
+        subject: `Contact Form: ${formData.subject}`,
+        text: `
+            Name: ${formData.name}
+            Email: ${formData.email}
+            Subject: ${formData.subject}
+
+            Message:
+            ${formData.message}
+
+            ---
+            This message was sent from the Lasha Consultancy contact form.
+        `,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
+            <div style="background-color: #ffbd58; padding: 20px; text-align: center; border-radius: 8px 8px 0 0;">
+              <h1 style="margin: 0; color: #1a1a1a;">New Contact Form Submission</h1>
+            </div>
+            
+            <div style="background-color: white; padding: 30px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <table style="width: 100%; border-collapse: collapse;">
+                <tr>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                    <strong style="color: #666;">Name:</strong>
+                  </td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #eee; color: #333;">
+                    ${formData.name}
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                    <strong style="color: #666;">Email:</strong>
+                  </td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                    <a href="mailto:${formData.email}" style="color: #ffbd58; text-decoration: none;">${formData.email}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #eee;">
+                    <strong style="color: #666;">Subject:</strong>
+                  </td>
+                  <td style="padding: 12px 0; border-bottom: 1px solid #eee; color: #333;">
+                    ${formData.subject}
+                  </td>
+                </tr>
+              </table>
+              
+              <div style="margin-top: 24px;">
+                <strong style="color: #666; display: block; margin-bottom: 8px;">Message:</strong>
+                <div style="background-color: #f9f9f9; padding: 16px; border-left: 4px solid #ffbd58; border-radius: 4px; color: #333; line-height: 1.6;">
+                  ${formData.message.replace(/\n/g, '<br>')}
+                </div>
+              </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px; color: #999; font-size: 12px;">
+              <p>This message was sent from the Lasha Consultancy contact form</p>
+            </div>
+          </div>
+        `,
+      });
+
+      console.log('Email sent successfully:', response);
+      
+      toast({ 
+        title: "Message Sent!", 
+        description: "We'll get back to you within 24 hours." 
+      });
+      
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({ 
+        title: "Error", 
+        description: "Failed to send message. Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="relative bg-contact py-24 lg:py-32">
@@ -174,7 +291,7 @@ const ContactSection = () => {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-70"
+                className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-70 cursor-pointer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

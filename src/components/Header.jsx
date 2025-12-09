@@ -155,7 +155,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: navLinks.length * 0.1 }}
+                transition={{ delay: NAV_LINKS.length * 0.1 }}
                 className="btn-primary text-center mt-4"
               >
                 Get Started

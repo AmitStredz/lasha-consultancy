@@ -35,10 +35,10 @@ const Footer = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         onClick={scrollToTop}
-        className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-primary/30 transition-all"
+        className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-primary/30 transition-all cursor-pointer"
         whileHover={{ y: -3 }}
       >
-        <FiChevronUp className="w-6 h-6" />
+        <FiChevronUp className="w-6 h-6 cursor-pointer" />
       </motion.button>
 
       <div className="container mx-auto px-6 lg:px-12">
