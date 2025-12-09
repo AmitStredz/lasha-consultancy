@@ -65,7 +65,7 @@ const Header = () => {
           >
             <div className="w-11 h-11 bg-primary rounded-sm flex items-center justify-center group-hover:shadow-lg transition-shadow">
               {/* <TbStairs className="w-6 h-6 text-primary-foreground" /> */}
-              <img src="/logo2.png" alt="Lasha Consultancy Logo" className="w-10 h-10" />
+              <img src="/logo2.webp" alt="Lasha Consultancy Logo" className="w-10 h-10" />
             </div>
             <div className="flex flex-col">
               <span className="font-display text-lg font-semibold text-foreground">

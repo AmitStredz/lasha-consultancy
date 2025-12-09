@@ -1,0 +1,27 @@
+{
+  "name": "Lasha Consultancy - HR, Real Estate, Tourism & AI Services in Dubai",
+  "short_name": "Lasha Consultancy",
+  "description": "Premier consulting services in Dubai offering HR solutions, real estate expertise, tourism experiences, and AI automation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffbd58",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo2.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo2.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "consulting", "real estate", "hr", "tourism"],
+  "lang": "en",
+  "dir": "ltr"
+}

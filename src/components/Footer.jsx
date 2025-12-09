@@ -8,6 +8,7 @@ const footerLinks = {
     { name: "Human Resources", href: "#services" },
     { name: "Real Estate", href: "#services" },
     { name: "AI Automation", href: "#services" },
+    { name: "Tourism", href: "#services" },
   ],
   company: [
     { name: "About Us", href: "#about" },
@@ -54,7 +55,7 @@ const Footer = () => {
             <a href="#home" className="flex items-center gap-4 mb-6 group">
               <div className="w-11 h-11 bg-primary rounded-sm flex items-center justify-center shadow-sm shadow-primary/20 transition-shadow group-hover:shadow-primary/40">
                 {/* <TbStairs className="w-6 h-6 text-primary-foreground" /> */}
-              <img src="/logo2.png" alt="Lasha Consultancy Logo" className="w-12 h-12" />
+              <img src="/logo2.webp" alt="Lasha Consultancy Logo" className="w-12 h-12" />
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-xl font-semibold text-footer-foreground">

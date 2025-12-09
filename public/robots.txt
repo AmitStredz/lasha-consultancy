@@ -1,0 +1,14 @@
+# Robots.txt for Lasha Consultancy
+# https://lashaconsultancy.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://lashaconsultancy.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 0
+
+# Disallow specific paths if any (currently none)
+# Disallow: /admin/
