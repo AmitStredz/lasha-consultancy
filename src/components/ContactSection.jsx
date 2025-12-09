@@ -207,7 +207,7 @@ const ContactSection = () => {
               ))}
             </div>
 
-            <div className="bg-white/60 rounded-2xl border border-white/40 backdrop-blur-xl p-6 shadow-lg shadow-primary/10">
+            {/* <div className="bg-white/60 rounded-2xl border border-white/40 backdrop-blur-xl p-6 shadow-lg shadow-primary/10">
               <p className="text-xs uppercase tracking-[0.4em] text-primary/70 mb-3">Why businesses choose us</p>
               <ul className="space-y-3 text-sm text-contact-foreground/70">
                 <li className="flex items-center gap-2">
@@ -220,7 +220,7 @@ const ContactSection = () => {
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" /> Tailored solutions for Dubai's market
                 </li>
               </ul>
-            </div>
+            </div> */}
           </motion.div>
 
           <motion.div

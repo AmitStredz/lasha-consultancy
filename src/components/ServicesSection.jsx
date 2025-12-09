@@ -7,30 +7,30 @@ const services = [
   {
     icon: FiUsers,
     title: "Human Resources",
-    description: "Comprehensive HR solutions including talent acquisition, workforce planning, performance management, and employee development strategies.",
+    description: "Comprehensive HR solutions including talent acquisition, workforce planning and employee development strategies.",
     image: '/assets/hr.JPG',
-    features: ["Talent Acquisition", "Workforce Planning"],
+    // features: ["Talent Acquisition", "Workforce Planning"],
   },
   {
     icon: FiHome,
     title: "Real Estate",
     description: "Expert real estate services covering market analysis, property valuation, investment consulting, and strategic property management.",
     image: '/assets/real-estate.WEBP',
-    features: ["Market Analysis", "Property Valuation", "Investment Consulting"],
+    // features: ["Market Analysis", "Property Valuation", "Investment Consulting"],
   },
   {
     icon: FiCpu,
     title: "AI Automation",
     description: "Cutting-edge AI-powered automation solutions to streamline operations, enhance productivity, and drive data-driven decision making.",
     image: '/assets/ai.PNG',
-    features: ["Process Automation", "Data Analytics", "Smart Solutions"],
+    // features: ["Process Automation", "Data Analytics", "Smart Solutions"],
   },
   {
     icon: FiGlobe,
     title: "Tourism",
     description: "Premium tourism services offering curated travel experiences, destination management, tour planning, and hospitality consulting across UAE.",
     image: '/assets/tourism.jpg',
-    features: ["Destination Management", "Tour Planning", "Hospitality Consulting"],
+    // features: ["Destination Management", "Tour Planning", "Hospitality Consulting"],
   },
 ];
 
@@ -158,7 +158,7 @@ const ServicesSection = () => {
                 </p>
 
                 {/* Features */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                {/* <div className="flex flex-wrap gap-2 mb-6">
                   {service.features.map((feature) => (
                     <span
                       key={feature}
@@ -167,7 +167,7 @@ const ServicesSection = () => {
                       {feature}
                     </span>
                   ))}
-                </div>
+                </div> */}
 
                 {/* CTA */}
                 <motion.a

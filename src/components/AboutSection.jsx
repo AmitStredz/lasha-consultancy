@@ -36,7 +36,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="relative bg-background py-24 lg:py-32">
       {/* Decorative Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 pointer-events-none">
         <div className="pattern-grid opacity-20" />
         <motion.div
           className="absolute -left-10 top-1/3 w-36 h-36 rounded-full bg-primary/8 blur-3xl"
@@ -50,7 +50,7 @@ const AboutSection = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <motion.div
           ref={ref}
           variants={containerVariants}

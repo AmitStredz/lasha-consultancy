@@ -149,73 +149,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Right - Enhanced Content Area */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative order-1 lg:order-2"
-          >
-            {/* Glass Card Container */}
-            <div className="relative max-w-md mx-auto lg:max-w-none">
-              <motion.div 
-                className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 p-4 sm:p-6"
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                {/* Inner content */}
-                <div className="text-center text-white space-y-3 sm:space-y-4">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-linear-to-br from-orange-400 to-orange-500 rounded-xl flex items-center justify-center mx-auto">
-                    <span className="text-xl sm:text-2xl">🏢</span>
-                  </div>
-                  
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2">Premium Services</h3>
-                    <p className="text-white/80 text-xs sm:text-sm">
-                      Comprehensive solutions for HR, Real Estate, and AI automation tailored for Dubai's dynamic business landscape.
-                    </p>
-                  </div>
 
-                  <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/20">
-                    <div className="text-center">
-                      <div className="text-sm sm:text-base font-bold">24/7</div>
-                      <div className="text-[10px] sm:text-xs text-white/70">Support</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-sm sm:text-base font-bold">100%</div>
-                      <div className="text-[10px] sm:text-xs text-white/70">Licensed</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-sm sm:text-base font-bold">UAE</div>
-                      <div className="text-[10px] sm:text-xs text-white/70">Based</div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Decorative Dots */}
-              <div className="hidden sm:grid absolute -top-3 -right-3 grid-cols-3 gap-1 opacity-30">
-                {Array.from({ length: 9 }).map((_, i) => (
-                  <div key={i} className="w-2 h-2 bg-orange-400 rounded-full" />
-                ))}
-              </div>
-            </div>
-
-            {/* Floating Highlights - Hidden on mobile and tablet */}
-            <div className="hidden xl:flex flex-col gap-4 absolute -left-28 top-12">
-              {floatingHighlights.map((item) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: item.delay, duration: 0.5 }}
-                  className="glass-panel px-4 py-3 text-white/80 text-sm flex items-center gap-3 shadow-lg shadow-black/10"
-                >
-                  <span className="text-lg">{item.icon}</span>
-                  <span>{item.label}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </motion.div>
 

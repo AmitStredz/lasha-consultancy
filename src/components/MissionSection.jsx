@@ -100,7 +100,7 @@ const MissionSection = () => {
 
             <motion.p 
               variants={itemVariants}
-              className="text-mission-foreground/70 text-lg leading-relaxed mb-10"
+              className="text-mission-foreground/70 text-lg md:text-xl leading-relaxed mb-10"
             >
               Our mission is to help our clients scale smarter, operate faster, and unlock opportunities through data-driven insights, seamless technology, and personalized support.
             </motion.p>
@@ -164,7 +164,7 @@ const MissionSection = () => {
         </motion.div>
 
         {/* Bottom Stats Bar */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -204,7 +204,7 @@ const MissionSection = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
