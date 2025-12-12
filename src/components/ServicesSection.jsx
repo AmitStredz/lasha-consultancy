@@ -15,7 +15,7 @@ const services = [
     icon: FiHome,
     title: "Real Estate",
     description: "Expert real estate services covering market analysis, property valuation, investment consulting, and strategic property management.",
-    image: '/assets/real-estate.webp',
+    image: '/assets/real.webp',
     // features: ["Market Analysis", "Property Valuation", "Investment Consulting"],
   },
   {
