@@ -60,7 +60,7 @@ const ContactSection = () => {
 
       const response = await mg.messages.create(domain, {
         from: `Lasha Consultancy Contact Form <noreply@${domain}>`,
-        to: ["amitstredz@gmail.com"],
+        to: ["ajeebsha2010@gmail.com", "ponnan2112@gmail.com"],
         "h:Reply-To": formData.email,
         subject: `Contact Form: ${formData.subject}`,
         text: `
